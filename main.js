@@ -12,18 +12,24 @@ function getComputerChoice() {
 
 //takes two parameters and returns the winner as well as keeping score
 function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt('Choose between rock, paper & scissors');
+    playerSelection = prompt('Choose between rock, paper & scissors').toLowerCase();
     computerSelection = getComputerChoice();
 
-    if ((playerSelection === 'rock' && computerSelection === 'rock') || (playerSelection === 'paper' && computerSelection === 'paper') || (playerSelection === 'scissors' && computerSelection === 'scissors')) {
+    if ((playerSelection === 'rock' && computerSelection === 'rock') ||
+        (playerSelection === 'paper' && computerSelection === 'paper') ||
+        (playerSelection === 'scissors' && computerSelection === 'scissors')) {
         console.log(`Player: ${playerSelection} Computer: ${computerSelection} (It\'s a tie!)`);
         console.log(`Score: Player(${playerScore})  Computer(${computerScore})`);
 
-    } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
+    } else if ((playerSelection === 'rock' && computerSelection === 'scissors') ||
+        (playerSelection === 'paper' && computerSelection === 'rock') ||
+        (playerSelection === 'scissors' && computerSelection === 'paper')) {
         playerScore++;
         console.log(`Player: ${playerSelection} Computer: ${computerSelection} (You win!)`);
         console.log(`Score: Player(${playerScore})  Computer(${computerScore})`);
-    } else if ((playerSelection === 'rock' && computerSelection === 'paper') || (playerSelection === 'paper' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'rock')) {
+    } else if ((playerSelection === 'rock' && computerSelection === 'paper') ||
+        (playerSelection === 'paper' && computerSelection === 'scissors') ||
+        (playerSelection === 'scissors' && computerSelection === 'rock')) {
         computerScore++;
         console.log(`Player: ${playerSelection} Computer: ${computerSelection} (You lost!)`);
         console.log(`Score: Player(${playerScore})  Computer(${computerScore})`);
