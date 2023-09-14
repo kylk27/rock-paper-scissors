@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Rock Paper Scissors Game</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="main.js">
-    </script>
+    <div class="modal" id="modal">
+        <div class="container">
+            <h2 class="modalText">Hello World...</h2>
+           <a href="#"><p class="modalButton">Play Again</p></a>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Sword Gun Shield</h1>
+        </div>
+    </header>
+    <section class="heroText">
+        <div class="container">
+            <div class="status">Choose your weapon</div>
+            <div class="description">The first one to score 5 points wins!</div>
+        </div>
+    </section>
+    <section class="battle">
+        <div class="container">
+            <div class="playerBox">
+                <div class="playerWeap">?</div>
+                <div class="playerScore">Player: 0</div>
+            </div>
+            <div class="compuBox">
+                <div class="compuWeap">?</div>
+                <div class="compuScore">Computer: 0</div>
+            </div>
+        </div>
+    </section>
+    <section class="selection">
+        <div class="container">
+            <a href="#"><img class="box" id="sword" src="./images/sword.jpg"></a>
+            <a href="#"><img class="box" id="gun" src="./images/gun.jpg"></a>
+            <a href="#"><img class="box" id="shield" src="./images/shield.jpg"></a>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>2023 @kylk27</p>
+        </div>
+    </footer>
 </body>
 </html>
